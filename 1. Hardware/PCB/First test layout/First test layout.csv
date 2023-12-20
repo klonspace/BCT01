@@ -1,0 +1,4 @@
+"#","Reference","Qty","Value","Footprint","DNP"
+"1","KEY1, KEY2, KEY3, KEY4, KEY5, KEY6, KEY7, KEY8","8","CPG151101D212","footprint:KEY-TH_CPG151101D21X",""
+"2","R1, R2, R3, R4, R5, R6, R7, R8","8","10k","Resistor_THT:R_Array_SIP4",""
+"3","U1","1","SN74HC165NSR","footprint:SOP-16_L10.3-W5.4-P1.27-LS7.8-BL",""

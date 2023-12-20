@@ -1,0 +1,5 @@
+shopping list :
+
+-resistor booklet
+-decoupling capacitors, 0.1 uf ceramic
+-breadboardable audiojack

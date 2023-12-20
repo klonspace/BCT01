@@ -1,0 +1,440 @@
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"hc165.cpp"
+  13              		.text
+  14              	.Ltext0:
+  15              		.cfi_sections	.debug_frame
+  16              		.section	.text._ZN16ShiftRegister1654InitEP12dsy_gpio_pinj,"ax",%progbits
+  17              		.align	1
+  18              		.p2align 2,,3
+  19              		.global	_ZN16ShiftRegister1654InitEP12dsy_gpio_pinj
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv5-d16
+  26              	_ZN16ShiftRegister1654InitEP12dsy_gpio_pinj:
+  27              	.LVL0:
+  28              	.LFB4794:
+  29              		.file 1 "hc165.cpp"
+   1:hc165.cpp     **** #include <algorithm>
+   2:hc165.cpp     **** #include "hc165.h"
+   3:hc165.cpp     **** #include "daisy_seed.h"
+   4:hc165.cpp     **** #include "daisysp.h"
+   5:hc165.cpp     **** 
+   6:hc165.cpp     **** using namespace daisy;
+   7:hc165.cpp     **** using namespace daisysp;
+   8:hc165.cpp     **** 
+   9:hc165.cpp     **** void ShiftRegister165::Init(dsy_gpio_pin *pin_cfg, size_t num_daisy_chained)
+  10:hc165.cpp     **** {
+  30              		.loc 1 10 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  11:hc165.cpp     ****     // Initialize Pins as outputs
+  12:hc165.cpp     ****     for(size_t i = 0; i < NUM_PINS; i++)
+  34              		.loc 1 12 5 view .LVU1
+  35              	.LBB2:
+  36              		.loc 1 12 25 view .LVU2
+  37              	.LBE2:
+  10:hc165.cpp     ****     // Initialize Pins as outputs
+  38              		.loc 1 10 1 is_stmt 0 view .LVU3
+  39 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+  40              		.cfi_def_cfa_offset 32
+  41              		.cfi_offset 3, -32
+  42              		.cfi_offset 4, -28
+  43              		.cfi_offset 5, -24
+  44              		.cfi_offset 6, -20
+  45              		.cfi_offset 7, -16
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 2
+
+
+  46              		.cfi_offset 8, -12
+  47              		.cfi_offset 9, -8
+  48              		.cfi_offset 14, -4
+  49              	.LBB3:
+  50              		.loc 1 12 16 view .LVU4
+  51 0004 0025     		movs	r5, #0
+  52              	.LBE3:
+  10:hc165.cpp     ****     // Initialize Pins as outputs
+  53              		.loc 1 10 1 view .LVU5
+  54 0006 0746     		mov	r7, r0
+  55 0008 8846     		mov	r8, r1
+  56 000a 9146     		mov	r9, r2
+  57 000c 0446     		mov	r4, r0
+  58              	.LVL1:
+  59              	.L2:
+  60              	.LBB4:
+  13:hc165.cpp     ****     {
+  14:hc165.cpp     ****         pin_[i].pin = pin_cfg[i];
+  61              		.loc 1 14 9 is_stmt 1 discriminator 2 view .LVU6
+  15:hc165.cpp     ****         pin_[i].mode
+  16:hc165.cpp     ****             = i == PIN_DATA ? DSY_GPIO_MODE_INPUT : DSY_GPIO_MODE_OUTPUT_PP;
+  62              		.loc 1 16 29 is_stmt 0 discriminator 2 view .LVU7
+  63 000e AB1E     		subs	r3, r5, #2
+  14:hc165.cpp     ****         pin_[i].mode
+  64              		.loc 1 14 21 discriminator 2 view .LVU8
+  65 0010 38F815C0 		ldrh	ip, [r8, r5, lsl #1]	@ unaligned
+  17:hc165.cpp     ****         pin_[i].pull = DSY_GPIO_NOPULL;
+  66              		.loc 1 17 22 discriminator 2 view .LVU9
+  67 0014 4FF00006 		mov	r6, #0
+  12:hc165.cpp     ****     {
+  68              		.loc 1 12 5 discriminator 2 view .LVU10
+  69 0018 05F10105 		add	r5, r5, #1
+  70              	.LVL2:
+  16:hc165.cpp     ****         pin_[i].pull = DSY_GPIO_NOPULL;
+  71              		.loc 1 16 29 discriminator 2 view .LVU11
+  72 001c 18BF     		it	ne
+  73 001e 0123     		movne	r3, #1
+  18:hc165.cpp     ****         dsy_gpio_init(&pin_[i]);
+  74              		.loc 1 18 22 discriminator 2 view .LVU12
+  75 0020 2046     		mov	r0, r4
+  14:hc165.cpp     ****         pin_[i].mode
+  76              		.loc 1 14 21 discriminator 2 view .LVU13
+  77 0022 A4F800C0 		strh	ip, [r4]	@ unaligned
+  15:hc165.cpp     ****             = i == PIN_DATA ? DSY_GPIO_MODE_INPUT : DSY_GPIO_MODE_OUTPUT_PP;
+  78              		.loc 1 15 9 is_stmt 1 discriminator 2 view .LVU14
+  12:hc165.cpp     ****     {
+  79              		.loc 1 12 25 is_stmt 0 discriminator 2 view .LVU15
+  80 0026 0434     		adds	r4, r4, #4
+  16:hc165.cpp     ****         pin_[i].pull = DSY_GPIO_NOPULL;
+  81              		.loc 1 16 29 discriminator 2 view .LVU16
+  82 0028 04F8023C 		strb	r3, [r4, #-2]
+  17:hc165.cpp     ****         dsy_gpio_init(&pin_[i]);
+  83              		.loc 1 17 9 is_stmt 1 discriminator 2 view .LVU17
+  17:hc165.cpp     ****         dsy_gpio_init(&pin_[i]);
+  84              		.loc 1 17 22 is_stmt 0 discriminator 2 view .LVU18
+  85 002c 04F8016C 		strb	r6, [r4, #-1]
+  86              		.loc 1 18 9 is_stmt 1 discriminator 2 view .LVU19
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 3
+
+
+  87              		.loc 1 18 22 is_stmt 0 discriminator 2 view .LVU20
+  88 0030 FFF7FEFF 		bl	dsy_gpio_init
+  89              	.LVL3:
+  12:hc165.cpp     ****     {
+  90              		.loc 1 12 5 is_stmt 1 discriminator 2 view .LVU21
+  12:hc165.cpp     ****     {
+  91              		.loc 1 12 25 discriminator 2 view .LVU22
+  92 0034 042D     		cmp	r5, #4
+  93 0036 EAD1     		bne	.L2
+  94              	.LBE4:
+  19:hc165.cpp     ****     }
+  20:hc165.cpp     **** 
+  21:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK], 0);
+  95              		.loc 1 21 5 view .LVU23
+  96              		.loc 1 21 19 is_stmt 0 view .LVU24
+  97 0038 3146     		mov	r1, r6
+  98 003a 381D     		adds	r0, r7, #4
+  99 003c FFF7FEFF 		bl	dsy_gpio_write
+ 100              	.LVL4:
+  22:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_LOAD], 1);
+ 101              		.loc 1 22 5 is_stmt 1 view .LVU25
+ 102              		.loc 1 22 19 is_stmt 0 view .LVU26
+ 103 0040 0121     		movs	r1, #1
+ 104 0042 3846     		mov	r0, r7
+ 105 0044 FFF7FEFF 		bl	dsy_gpio_write
+ 106              	.LVL5:
+  23:hc165.cpp     **** 
+  24:hc165.cpp     ****     // std::fill(state_, state_ + kMaxSr165DaisyChain, 0x00);
+  25:hc165.cpp     ****     num_devices_ = num_daisy_chained;
+ 107              		.loc 1 25 5 is_stmt 1 view .LVU27
+  26:hc165.cpp     ****     // Set to 1 device if out of range.
+  27:hc165.cpp     ****     if(num_devices_ == 0 || num_devices_ > kMaxSr165DaisyChain)
+ 108              		.loc 1 27 5 view .LVU28
+ 109              		.loc 1 27 26 is_stmt 0 view .LVU29
+ 110 0048 09F1FF33 		add	r3, r9, #-1
+ 111              		.loc 1 27 5 view .LVU30
+ 112 004c 0F2B     		cmp	r3, #15
+ 113 004e 03D8     		bhi	.L3
+  25:hc165.cpp     ****     // Set to 1 device if out of range.
+ 114              		.loc 1 25 18 view .LVU31
+ 115 0050 C7F81090 		str	r9, [r7, #16]
+  28:hc165.cpp     ****         num_devices_ = 1;
+  29:hc165.cpp     **** }
+ 116              		.loc 1 29 1 view .LVU32
+ 117 0054 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 118              	.LVL6:
+ 119              	.L3:
+  28:hc165.cpp     ****         num_devices_ = 1;
+ 120              		.loc 1 28 9 is_stmt 1 view .LVU33
+  28:hc165.cpp     ****         num_devices_ = 1;
+ 121              		.loc 1 28 22 is_stmt 0 view .LVU34
+ 122 0058 0123     		movs	r3, #1
+ 123 005a 3B61     		str	r3, [r7, #16]
+ 124              		.loc 1 29 1 view .LVU35
+ 125 005c BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 126              		.loc 1 29 1 view .LVU36
+ 127              		.cfi_endproc
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 4
+
+
+ 128              	.LFE4794:
+ 130              		.section	.text._ZN16ShiftRegister1654ReadEv,"ax",%progbits
+ 131              		.align	1
+ 132              		.p2align 2,,3
+ 133              		.global	_ZN16ShiftRegister1654ReadEv
+ 134              		.syntax unified
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.fpu fpv5-d16
+ 139              	_ZN16ShiftRegister1654ReadEv:
+ 140              	.LVL7:
+ 141              	.LFB4795:
+  30:hc165.cpp     **** 
+  31:hc165.cpp     **** 
+  32:hc165.cpp     **** long ShiftRegister165::Read()
+  33:hc165.cpp     **** {
+ 142              		.loc 1 33 1 is_stmt 1 view -0
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+  34:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK_ENABLE], 0);
+ 146              		.loc 1 34 5 view .LVU38
+  33:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK_ENABLE], 0);
+ 147              		.loc 1 33 1 is_stmt 0 view .LVU39
+ 148 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 149              		.cfi_def_cfa_offset 32
+ 150              		.cfi_offset 3, -32
+ 151              		.cfi_offset 4, -28
+ 152              		.cfi_offset 5, -24
+ 153              		.cfi_offset 6, -20
+ 154              		.cfi_offset 7, -16
+ 155              		.cfi_offset 8, -12
+ 156              		.cfi_offset 9, -8
+ 157              		.cfi_offset 14, -4
+ 158              		.loc 1 34 20 view .LVU40
+ 159 0004 00F10C09 		add	r9, r0, #12
+ 160              		.loc 1 34 19 view .LVU41
+ 161 0008 0021     		movs	r1, #0
+  33:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK_ENABLE], 0);
+ 162              		.loc 1 33 1 view .LVU42
+ 163 000a 0746     		mov	r7, r0
+  35:hc165.cpp     ****     System::DelayUs(50);
+  36:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_LOAD], 1);
+  37:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK], 1);
+ 164              		.loc 1 37 20 view .LVU43
+ 165 000c 061D     		adds	r6, r0, #4
+  34:hc165.cpp     ****     System::DelayUs(50);
+ 166              		.loc 1 34 19 view .LVU44
+ 167 000e 4846     		mov	r0, r9
+ 168              	.LVL8:
+  34:hc165.cpp     ****     System::DelayUs(50);
+ 169              		.loc 1 34 19 view .LVU45
+ 170 0010 FFF7FEFF 		bl	dsy_gpio_write
+ 171              	.LVL9:
+  35:hc165.cpp     ****     System::DelayUs(50);
+ 172              		.loc 1 35 5 is_stmt 1 view .LVU46
+  35:hc165.cpp     ****     System::DelayUs(50);
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 5
+
+
+ 173              		.loc 1 35 20 is_stmt 0 view .LVU47
+ 174 0014 3220     		movs	r0, #50
+ 175 0016 FFF7FEFF 		bl	_ZN5daisy6System7DelayUsEm
+ 176              	.LVL10:
+  36:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK], 1);
+ 177              		.loc 1 36 5 is_stmt 1 view .LVU48
+  36:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK], 1);
+ 178              		.loc 1 36 19 is_stmt 0 view .LVU49
+ 179 001a 0121     		movs	r1, #1
+ 180 001c 3846     		mov	r0, r7
+ 181 001e FFF7FEFF 		bl	dsy_gpio_write
+ 182              	.LVL11:
+ 183              		.loc 1 37 5 is_stmt 1 view .LVU50
+ 184              		.loc 1 37 19 is_stmt 0 view .LVU51
+ 185 0022 0121     		movs	r1, #1
+ 186 0024 3046     		mov	r0, r6
+ 187 0026 FFF7FEFF 		bl	dsy_gpio_write
+ 188              	.LVL12:
+  38:hc165.cpp     **** 
+  39:hc165.cpp     ****     // Get data from 74HC165
+  40:hc165.cpp     ****     // dsy_gpio_write(&pin_[PIN_CLK], 1);
+  41:hc165.cpp     **** 
+  42:hc165.cpp     ****     long value = 0;
+ 189              		.loc 1 42 5 is_stmt 1 view .LVU52
+  43:hc165.cpp     ****     long i;
+ 190              		.loc 1 43 5 view .LVU53
+  44:hc165.cpp     **** 
+  45:hc165.cpp     ****     for(i = 0; i < 8*num_devices_; ++i)
+ 191              		.loc 1 45 5 view .LVU54
+ 192              		.loc 1 45 18 view .LVU55
+ 193              		.loc 1 45 21 is_stmt 0 view .LVU56
+ 194 002a 3D69     		ldr	r5, [r7, #16]
+ 195              		.loc 1 45 18 view .LVU57
+ 196 002c ED00     		lsls	r5, r5, #3
+ 197 002e 19D0     		beq	.L9
+ 198              		.loc 1 45 11 view .LVU58
+ 199 0030 0024     		movs	r4, #0
+  46:hc165.cpp     ****     {
+  47:hc165.cpp     ****         value |= dsy_gpio_read(&pin_[PIN_DATA]) << (i);
+ 200              		.loc 1 47 32 view .LVU59
+ 201 0032 07F10808 		add	r8, r7, #8
+  42:hc165.cpp     ****     long i;
+ 202              		.loc 1 42 10 view .LVU60
+ 203 0036 2546     		mov	r5, r4
+ 204              	.LVL13:
+ 205              	.L10:
+ 206              		.loc 1 47 9 is_stmt 1 discriminator 2 view .LVU61
+ 207              		.loc 1 47 31 is_stmt 0 discriminator 2 view .LVU62
+ 208 0038 4046     		mov	r0, r8
+ 209 003a FFF7FEFF 		bl	dsy_gpio_read
+ 210              	.LVL14:
+ 211 003e 0346     		mov	r3, r0
+  48:hc165.cpp     ****         dsy_gpio_write(&pin_[PIN_CLK], 1);
+ 212              		.loc 1 48 23 discriminator 2 view .LVU63
+ 213 0040 0121     		movs	r1, #1
+ 214 0042 3046     		mov	r0, r6
+  47:hc165.cpp     ****         dsy_gpio_write(&pin_[PIN_CLK], 1);
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 6
+
+
+ 215              		.loc 1 47 49 discriminator 2 view .LVU64
+ 216 0044 A340     		lsls	r3, r3, r4
+  45:hc165.cpp     ****     {
+ 217              		.loc 1 45 5 discriminator 2 view .LVU65
+ 218 0046 0C44     		add	r4, r4, r1
+ 219              	.LVL15:
+  47:hc165.cpp     ****         dsy_gpio_write(&pin_[PIN_CLK], 1);
+ 220              		.loc 1 47 15 discriminator 2 view .LVU66
+ 221 0048 1D43     		orrs	r5, r5, r3
+ 222              	.LVL16:
+ 223              		.loc 1 48 9 is_stmt 1 discriminator 2 view .LVU67
+ 224              		.loc 1 48 23 is_stmt 0 discriminator 2 view .LVU68
+ 225 004a FFF7FEFF 		bl	dsy_gpio_write
+ 226              	.LVL17:
+  49:hc165.cpp     ****         System::DelayUs(50);
+ 227              		.loc 1 49 9 is_stmt 1 discriminator 2 view .LVU69
+ 228              		.loc 1 49 24 is_stmt 0 discriminator 2 view .LVU70
+ 229 004e 3220     		movs	r0, #50
+ 230 0050 FFF7FEFF 		bl	_ZN5daisy6System7DelayUsEm
+ 231              	.LVL18:
+  50:hc165.cpp     ****         dsy_gpio_write(&pin_[PIN_CLK], 0);
+ 232              		.loc 1 50 9 is_stmt 1 discriminator 2 view .LVU71
+ 233              		.loc 1 50 23 is_stmt 0 discriminator 2 view .LVU72
+ 234 0054 0021     		movs	r1, #0
+ 235 0056 3046     		mov	r0, r6
+ 236 0058 FFF7FEFF 		bl	dsy_gpio_write
+ 237              	.LVL19:
+  45:hc165.cpp     ****     {
+ 238              		.loc 1 45 5 is_stmt 1 discriminator 2 view .LVU73
+  45:hc165.cpp     ****     {
+ 239              		.loc 1 45 18 discriminator 2 view .LVU74
+  45:hc165.cpp     ****     {
+ 240              		.loc 1 45 21 is_stmt 0 discriminator 2 view .LVU75
+ 241 005c 3B69     		ldr	r3, [r7, #16]
+  45:hc165.cpp     ****     {
+ 242              		.loc 1 45 18 discriminator 2 view .LVU76
+ 243 005e B4EBC30F 		cmp	r4, r3, lsl #3
+ 244 0062 E9D3     		bcc	.L10
+ 245              	.LVL20:
+ 246              	.L9:
+  51:hc165.cpp     ****     }
+  52:hc165.cpp     ****     // Write pulse to load pin
+  53:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_LOAD], 0);
+ 247              		.loc 1 53 5 is_stmt 1 view .LVU77
+ 248              		.loc 1 53 19 is_stmt 0 view .LVU78
+ 249 0064 3846     		mov	r0, r7
+ 250 0066 0021     		movs	r1, #0
+ 251 0068 FFF7FEFF 		bl	dsy_gpio_write
+ 252              	.LVL21:
+  54:hc165.cpp     ****     dsy_gpio_write(&pin_[PIN_CLK_ENABLE], 1);
+ 253              		.loc 1 54 5 is_stmt 1 view .LVU79
+ 254              		.loc 1 54 19 is_stmt 0 view .LVU80
+ 255 006c 4846     		mov	r0, r9
+ 256 006e 0121     		movs	r1, #1
+ 257 0070 FFF7FEFF 		bl	dsy_gpio_write
+ 258              	.LVL22:
+  55:hc165.cpp     **** 
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 7
+
+
+  56:hc165.cpp     **** 
+  57:hc165.cpp     ****     return value;
+ 259              		.loc 1 57 5 is_stmt 1 view .LVU81
+  58:hc165.cpp     ****     // return 0;
+  59:hc165.cpp     **** }
+ 260              		.loc 1 59 1 is_stmt 0 view .LVU82
+ 261 0074 2846     		mov	r0, r5
+ 262 0076 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 263              		.loc 1 59 1 view .LVU83
+ 264              		.cfi_endproc
+ 265              	.LFE4795:
+ 267 007a 00BF     		.text
+ 268              	.Letext0:
+ 269              		.file 2 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 270              		.file 3 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 271              		.file 4 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdint.h"
+ 272              		.file 5 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stddef.h"
+ 273              		.file 6 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cmath"
+ 274              		.file 7 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\std_abs.h"
+ 275              		.file 8 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\type_traits"
+ 276              		.file 9 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\debug\\debug.h"
+ 277              		.file 10 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdlib"
+ 278              		.file 11 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi\\t
+ 279              		.file 12 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\algorithmf
+ 280              		.file 13 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_pair.h
+ 281              		.file 14 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\exception_
+ 282              		.file 15 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdint"
+ 283              		.file 16 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdarg"
+ 284              		.file 17 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstdio"
+ 285              		.file 18 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cstring"
+ 286              		.file 19 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\cwchar"
+ 287              		.file 20 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\clocale"
+ 288              		.file 21 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\basic_stri
+ 289              		.file 22 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\stl_tempbu
+ 290              		.file 23 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\bits\\predefined
+ 291              		.file 24 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 292              		.file 25 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 293              		.file 26 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 294              		.file 27 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\math.h"
+ 295              		.file 28 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdlib.h"
+ 296              		.file 29 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\math.h"
+ 297              		.file 30 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\c++\\10.2.1\\stdlib.h"
+ 298              		.file 31 "../../libDaisy//src/daisy_core.h"
+ 299              		.file 32 "../../libDaisy//src/per/tim.h"
+ 300              		.file 33 "../../libDaisy//src/sys/system.h"
+ 301              		.file 34 "../../libDaisy//src/util/wav_format.h"
+ 302              		.file 35 "../../libDaisy//src/dev/max11300.h"
+ 303              		.file 36 "../../libDaisy//src/daisy_seed.h"
+ 304              		.file 37 "../../libDaisy//src/per/gpio.h"
+ 305              		.file 38 "c:\\program files\\daisytoolchain\\lib\\gcc\\arm-none-eabi\\10.2.1\\include\\stdarg.h"
+ 306              		.file 39 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\stdio.h"
+ 307              		.file 40 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\string.h"
+ 308              		.file 41 "../../DaisySP//Source/Control/adenv.h"
+ 309              		.file 42 "../../DaisySP//Source/Utility/dsp.h"
+ 310              		.file 43 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\wchar.h"
+ 311              		.file 44 "c:\\program files\\daisytoolchain\\arm-none-eabi\\include\\locale.h"
+ 312              		.file 45 "hc165.h"
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 8
+
+
+ 313              		.file 46 "../../libDaisy//src/dev/sr_595.h"
+ 314              		.file 47 "<built-in>"
+ARM GAS  C:\Users\callu\AppData\Local\Temp\cclpp8lg.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hc165.cpp
+C:\Users\callu\AppData\Local\Temp\cclpp8lg.s:17     .text._ZN16ShiftRegister1654InitEP12dsy_gpio_pinj:00000000 $t
+C:\Users\callu\AppData\Local\Temp\cclpp8lg.s:26     .text._ZN16ShiftRegister1654InitEP12dsy_gpio_pinj:00000000 _ZN16ShiftRegister1654InitEP12dsy_gpio_pinj
+C:\Users\callu\AppData\Local\Temp\cclpp8lg.s:131    .text._ZN16ShiftRegister1654ReadEv:00000000 $t
+C:\Users\callu\AppData\Local\Temp\cclpp8lg.s:139    .text._ZN16ShiftRegister1654ReadEv:00000000 _ZN16ShiftRegister1654ReadEv
+
+UNDEFINED SYMBOLS
+dsy_gpio_init
+dsy_gpio_write
+_ZN5daisy6System7DelayUsEm
+dsy_gpio_read

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>D:\HARD_SAMPLER\1. Hardware\PCB\First test layout\Sencond layout with SK16.kicad_sch</source>
+    <date>22/10/2023 12:02:52</date>
+    <tool>Eeschema 7.0.8</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Sencond layout with SK16.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="D1">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6628b34-da95-472e-ad6f-8e1c45370358</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f88a438-157c-4ec7-a3ae-a06775d18c10</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97e0962b-12d2-4f58-85d2-9aa0bb1fffc7</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6b79cd96-21eb-4f3e-a22e-8a1a0df6709a</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>20dec8ca-27d6-4dc0-94ec-b4174fc49ace</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4d881c5-f115-4e3c-a90f-41bae5319e8c</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4689294b-6726-44d3-8a94-557124b4109b</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>SK6812MINI</value>
+      <footprint>LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</datasheet>
+      <libsource lib="LED" part="SK6812MINI" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="RGB LED with integrated controller"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel Mini addressable"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ef566dd0-4109-44af-b2f9-0220ebda35f7</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_02x07_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical_SMD</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x07_Odd_Even" description="Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dda88a76-35d9-41fe-8b19-3716b93013fa</tstamps>
+    </comp>
+    <comp ref="KEY1">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>536cee3e-da55-4a80-a5e4-038f09267c4b</tstamps>
+    </comp>
+    <comp ref="KEY2">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c2934a1b-376e-4362-80ab-7c297bc0004c</tstamps>
+    </comp>
+    <comp ref="KEY3">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>951daa0f-2402-464b-83b0-ae2ddcf18978</tstamps>
+    </comp>
+    <comp ref="KEY4">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80566de8-9c11-4ea8-8e32-146ec292a9e0</tstamps>
+    </comp>
+    <comp ref="KEY5">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03deb25c-398d-4af7-bc61-88a0d1a56fa6</tstamps>
+    </comp>
+    <comp ref="KEY6">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>afbdfecc-1484-40a6-a761-0bde546f6f79</tstamps>
+    </comp>
+    <comp ref="KEY7">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3482272b-86a6-44ce-8b99-4ea23c6ff19b</tstamps>
+    </comp>
+    <comp ref="KEY8">
+      <value>CPG151101D212</value>
+      <footprint>footprint:KEY-TH_CPG151101D21X</footprint>
+      <datasheet>https://item.szlcsc.com/383997.html</datasheet>
+      <fields>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <libsource lib="CPG151101D212" part="CPG151101D212" description=""/>
+      <property name="LCSC" value="C400234"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C400234"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e10402c6-1207-4e22-b537-99b5f67b6781</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c1bb3a1-182a-4abd-b2e5-2229e865935c</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d02509a-8381-440c-b796-19101ee420ee</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>83059d44-a966-490c-8d7d-060dcba50f87</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9b91e73-7c2a-4004-83e8-ff7462401a11</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95dbfe2b-a8ce-4954-af8b-2044550420d6</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a170c549-e2d1-4841-abe3-cd8287ab52cc</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2c750fe-abea-42bf-95f9-155f2d343684</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0201_0603Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7ab243af-fa9f-4761-97d2-f733ec39ecb4</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>SN74HC165NSR</value>
+      <footprint>footprint:SOP-16_L10.3-W5.4-P1.27-LS7.8-BL</footprint>
+      <datasheet>https://item.szlcsc.com/108111.html?ref=editor&amp;logined=true</datasheet>
+      <fields>
+        <field name="LCSC">C129935</field>
+      </fields>
+      <libsource lib="SN74HC165NSR" part="SN74HC165NSR" description=""/>
+      <property name="LCSC" value="C129935"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Sencond layout with SK16.kicad_sch"/>
+      <property name="ki_keywords" value="C129935"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0789596d-2f8d-4504-a8ea-d11f3b4e9b20</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CPG151101D212" part="CPG151101D212">
+      <docs>https://item.szlcsc.com/383997.html</docs>
+      <fields>
+        <field name="Reference">KEY</field>
+        <field name="Value">CPG151101D212</field>
+        <field name="Footprint">footprint:KEY-TH_CPG151101D21X</field>
+        <field name="Datasheet">https://item.szlcsc.com/383997.html</field>
+        <field name="LCSC">C400234</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x07_Odd_Even">
+      <description>Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x07_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LED" part="SK6812MINI">
+      <description>RGB LED with integrated controller</description>
+      <docs>https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</docs>
+      <footprints>
+        <fp>LED*SK6812MINI*PLCC*3.5x3.5mm*P1.75mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SK6812MINI</field>
+        <field name="Footprint">LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm</field>
+        <field name="Datasheet">https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DOUT" type="output"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="DIN" type="input"/>
+        <pin num="4" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SN74HC165NSR" part="SN74HC165NSR">
+      <docs>https://item.szlcsc.com/108111.html?ref=editor&amp;logined=true</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN74HC165NSR</field>
+        <field name="Footprint">footprint:SOP-16_L10.3-W5.4-P1.27-LS7.8-BL</field>
+        <field name="Datasheet">https://item.szlcsc.com/108111.html?ref=editor&amp;logined=true</field>
+        <field name="LCSC">C129935</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SH/LD#" type="unspecified"/>
+        <pin num="2" name="CLK" type="unspecified"/>
+        <pin num="3" name="E" type="unspecified"/>
+        <pin num="4" name="F" type="unspecified"/>
+        <pin num="5" name="G" type="unspecified"/>
+        <pin num="6" name="H" type="unspecified"/>
+        <pin num="7" name="QH#" type="unspecified"/>
+        <pin num="8" name="GND" type="unspecified"/>
+        <pin num="9" name="QH" type="unspecified"/>
+        <pin num="10" name="SER" type="unspecified"/>
+        <pin num="11" name="A" type="unspecified"/>
+        <pin num="12" name="B" type="unspecified"/>
+        <pin num="13" name="C" type="unspecified"/>
+        <pin num="14" name="D" type="unspecified"/>
+        <pin num="15" name="CLK/INH" type="unspecified"/>
+        <pin num="16" name="VCC" type="unspecified"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CPG151101D212">
+      <uri>D:/SOFTWARE/JLC2KiCad_lib/JLC2KiCad_lib/symbol/CPG151101D212.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>D:\SOFTWARE\kicad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>D:\SOFTWARE\kicad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="LED">
+      <uri>D:\SOFTWARE\kicad\7.0\share\kicad\symbols\/LED.kicad_sym</uri>
+    </library>
+    <library logical="SN74HC165NSR">
+      <uri>D:/SOFTWARE/JLC2KiCad_lib/JLC2KiCad_lib/symbol/SN74HC165NSR.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="KEY1" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY2" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY3" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY4" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY5" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY6" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY7" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="KEY8" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U1" pin="16" pinfunction="VCC" pintype="unspecified"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="D1" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D2" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D3" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D4" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D5" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D6" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D7" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D8" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="D1" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D2" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D3" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D4" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D5" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D6" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D7" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D8" pin="2" pinfunction="VSS" pintype="power_in"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="GND" pintype="unspecified"/>
+    </net>
+    <net code="4" name="Net-(D1-DIN)">
+      <node ref="D1" pin="3" pinfunction="DIN" pintype="input"/>
+      <node ref="J1" pin="9" pinfunction="Pin_9" pintype="passive"/>
+    </net>
+    <net code="5" name="Net-(D1-DOUT)">
+      <node ref="D1" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D2" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="6" name="Net-(D2-DOUT)">
+      <node ref="D2" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D3" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="7" name="Net-(D3-DOUT)">
+      <node ref="D3" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D4" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="8" name="Net-(D4-DOUT)">
+      <node ref="D4" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D5" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="9" name="Net-(D5-DOUT)">
+      <node ref="D5" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D6" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="10" name="Net-(D6-DOUT)">
+      <node ref="D6" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D7" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="11" name="Net-(D7-DOUT)">
+      <node ref="D7" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="D8" pin="3" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="12" name="Net-(D8-DOUT)">
+      <node ref="D8" pin="1" pinfunction="DOUT" pintype="output"/>
+      <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(J1-Pin_2)">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="CLK/INH" pintype="unspecified"/>
+    </net>
+    <net code="14" name="Net-(J1-Pin_4)">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="SH/LD#" pintype="unspecified"/>
+    </net>
+    <net code="15" name="Net-(J1-Pin_6)">
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="CLK" pintype="unspecified"/>
+    </net>
+    <net code="16" name="Net-(J1-Pin_8)">
+      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="QH#" pintype="unspecified"/>
+    </net>
+    <net code="17" name="Net-(J1-Pin_10)">
+      <node ref="J1" pin="10" pinfunction="Pin_10" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="QH" pintype="unspecified"/>
+    </net>
+    <net code="18" name="Net-(J1-Pin_12)">
+      <node ref="J1" pin="12" pinfunction="Pin_12" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="SER" pintype="unspecified"/>
+    </net>
+    <net code="19" name="Net-(U1-A)">
+      <node ref="KEY1" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="A" pintype="unspecified"/>
+    </net>
+    <net code="20" name="Net-(U1-B)">
+      <node ref="KEY2" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="B" pintype="unspecified"/>
+    </net>
+    <net code="21" name="Net-(U1-C)">
+      <node ref="KEY3" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="C" pintype="unspecified"/>
+    </net>
+    <net code="22" name="Net-(U1-D)">
+      <node ref="KEY4" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="D" pintype="unspecified"/>
+    </net>
+    <net code="23" name="Net-(U1-E)">
+      <node ref="KEY5" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="E" pintype="unspecified"/>
+    </net>
+    <net code="24" name="Net-(U1-F)">
+      <node ref="KEY6" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="F" pintype="unspecified"/>
+    </net>
+    <net code="25" name="Net-(U1-G)">
+      <node ref="KEY7" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="G" pintype="unspecified"/>
+    </net>
+    <net code="26" name="Net-(U1-H)">
+      <node ref="KEY8" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="H" pintype="unspecified"/>
+    </net>
+    <net code="27" name="unconnected-(J1-Pin_11-Pad11)">
+      <node ref="J1" pin="11" pinfunction="Pin_11" pintype="passive"/>
+    </net>
+    <net code="28" name="unconnected-(J1-Pin_13-Pad13)">
+      <node ref="J1" pin="13" pinfunction="Pin_13" pintype="passive"/>
+    </net>
+    <net code="29" name="unconnected-(J1-Pin_14-Pad14)">
+      <node ref="J1" pin="14" pinfunction="Pin_14" pintype="passive"/>
+    </net>
+  </nets>
+</export>

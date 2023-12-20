@@ -1,0 +1,5 @@
+{
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.tasks.runTask",
+    "args": "build_and_program"
+}
