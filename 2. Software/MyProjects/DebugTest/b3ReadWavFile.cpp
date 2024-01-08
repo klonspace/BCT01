@@ -9,12 +9,12 @@
 #include <math.h>
 
 
-#include "daisy_pod.h"
-#include "daisysp.h"
+// #include "daisy_pod.h"
+// #include "daisysp.h"
 
 
-using namespace daisy;
-using namespace daisysp;
+// using namespace daisy;
+// using namespace daisysp;
 
 const unsigned long B3_SINT8 = 0x1;
 const unsigned long B3_SINT16 = 0x2;

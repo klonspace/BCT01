@@ -33,10 +33,10 @@ b3ReadWavFile wavFileReaders[kMaxFiles];
 
 size_t pool_index = 0;
 int allocation_count = 0;
-#define CUSTOM_POOL_SIZE (64 * 1024 * 1024)
+#define CUSTOM_POOL_SIZE (32 * 1024 * 1024)
 
 static char DSY_SDRAM_BSS custom_pool[CUSTOM_POOL_SIZE];
-// static float DSY_SDRAM_BSS posData[CUSTOM_POOL_SIZE / 8];
+static float DSY_SDRAM_BSS posData[CUSTOM_POOL_SIZE / 4];
 // static float DSY_SDRAM_BSS timeData[CUSTOM_POOL_SIZE / 8];
 // static float DSY_SDRAM_BSS custom_pool[10];
 
@@ -102,7 +102,8 @@ float smoothspeed = 0.0;
 float smoothpos = 0.0;
 
 
-double sensorReadings[10] = { 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f };
+double sensorReadings[4] = { 0.f, 0.f, 0.f, 0.f };
+double currMeasure = 0.0;
 
 float deltas[5] = { 0.f, 0.f, 0.f, 0.f, 0.f };
 float averageDelta = 0.f;
@@ -175,13 +176,17 @@ double CubicHermite(double A, double B, double C, double D, double t) {
   return a * t * t * t + b * t * t + c * t + d;
 }
 
-double interpolateCubic(double t, int zeroindex) {
-  return CubicHermite(sensorReadings[zeroindex % 10], sensorReadings[(zeroindex + 1) % 10], sensorReadings[(zeroindex + 2) % 10], sensorReadings[(zeroindex + 3) % 10], t / sensorInterval);
+double interpolateCubic(double t) {
+  return CubicHermite(sensorReadings[0], sensorReadings[1], sensorReadings[2], sensorReadings[3], t);
 }
 
-double interpolate(double t, int zeroindex) {
-  return sensorReadings[(zeroindex + 1) % 10] + (sensorReadings[(zeroindex + 2) % 10] - sensorReadings[(zeroindex + 1) % 10]) * t / sensorInterval;
+double interpolate(double t) {
+  return sensorReadings[1] + (sensorReadings[2] - sensorReadings[1]) * t;
 }
+
+double numCyclesRead = 8.f;
+double currCycle = 0;
+double currframe = 0;
 void AudioCallback(float **in, float **out, size_t size) {
   hw.DebounceControls();
   inc = hw.encoder.Increment();
@@ -200,69 +205,28 @@ void AudioCallback(float **in, float **out, size_t size) {
       }
     }
   }
+
   bpm += 0.01 * ((60.f + 240.f * analogRead(PIN_POD_POT_1) / 1023.f) - bpm);
   sampleSpeed += 0.01 * ((-2.f + 4.f * analogRead(PIN_POD_POT_2) / 1023.f) - sampleSpeed);
 
+  if (floor(currframe / (numCyclesRead * 32.f)) != currCycle) {
+    currCycle = floor(currframe / (numCyclesRead * 32.f));
+    sensorReadings[0] = sensorReadings[1];
+    sensorReadings[1] = sensorReadings[2];
+    sensorReadings[2] = sensorReadings[3];
+    sensorReadings[3] = currMeasure;
 
-  // if (getCurrentNote(&currNote,
-  //                    &timeSinceNote,
-  //                    sequence,
-  //                    sequence_length,
-  //                    sequenceDivision,
-  //                    beatTime)) {
-  //   currSpeed = bpm * sampleSpeed;
-  //   currFrame = currNote / beatDivision + timeSinceNote * sampleSpeed;
-
-  //   for (size_t i = 0; i < size; i++) {
-  //     out[0][i] = wavFileReaders[sample].interpolate(
-  //       currFrame + float(i) * (currSpeed / (48000.0 * 60.0)),
-  //       0,
-  //       dataSources[sample]);
-  //     out[1][i] = wavFileReaders[sample].interpolate(
-  //       currFrame + float(i) * (currSpeed / (48000.0 * 60.0)),
-  //       1,
-  //       dataSources[sample]);
-  //   }
-  // } else {
-  //   for (size_t i = 0; i < size; i++) {
-  //     out[0][i] = 0;
-  //     out[1][i] = 0;
-  //   }
-  // }
-
-  // if (getCurrentNote(&currNote,
-  //                    &timeSinceNote,
-  //                    sequence,
-  //                    sequence_length,
-  //                    sequenceDivision,
-  //                    beatTime)) {
-  //   currSpeed = bpm * sampleSpeed;
-  //   currFrame = currNote / beatDivision + timeSinceNote * sampleSpeed;
-
-  for (size_t i = 0; i < size; i++) {
-    double frametime = currtime + (double)i * 1000.f / samplerate;
-    double nowt = interpolateCubic(fmod(frametime, sensorInterval), ((int)floor(frametime / sensorInterval) + 5) % 10);
-
-    // posData[numPositions] = nowt;
-    // numPositions++;
-
-    out[0][i] = min(speed * 50.0, 1.0) * wavFileReaders[sample].interpolate(nowt, 0, dataSources[sample]);
-    out[1][i] = min(speed * 50.0, 1.0) * wavFileReaders[sample].interpolate(nowt, 1, dataSources[sample]);
+    speed += (abs(sensorReadings[3] - sensorReadings[0]) - speed) * 0.2;
   }
 
-  currtime += 1000.f * (float)size / samplerate;
-  // } else {
-  //   for (size_t i = 0; i < size; i++) {
-  //     out[0][i] = 0;
-  //     out[1][i] = 0;
-  //   }
-  // }
+  for (size_t i = 0; i < size; i++) {
+    double nowt = interpolate(fmod(currframe, numCyclesRead * 32.f) / (numCyclesRead * 32.f));
+    out[0][i] = 1.0 * wavFileReaders[sample].interpolate(nowt, 0, dataSources[sample]);
+    out[1][i] = 1.0 * wavFileReaders[sample].interpolate(nowt, 1, dataSources[sample]);
+    currframe++;
+  }
 
-
-
-
-  // beatTime += bpm * ((float)size / (60.0 * 48000.0));
-  // beatTime += accel/4.0
+  // currtime += 1000.f * (float)size / samplerate;
 }
 
 
@@ -366,59 +330,14 @@ void loadFiles(void) {
   }
   root.close();
 }
-bool firstTimer = true;
-bool wroteData = false;
 
 File posDataFile;
-
-double lastMeasure = 0.0;
-double currMeasure = 0.0;
-void TimerHandler0() {
-  angle = 1.0 - (Sensor.getAngle() / 4096.0);
-  if (angle < 0.2 && lastAngle > 0.8) {
-    angleoffset += 1.f;
-  } else if (angle > 0.8 && lastAngle < 0.2) {
-    angleoffset -= 1.f;
-  }
-  currMeasure += ((angle + angleoffset) - currMeasure) * 0.2;
-  // currMeasure += 1.0 / 250.0;
-  sensorReadings[(int)floor(currtime / sensorInterval) % 10] = currMeasure;
-  // sensorReadings[loopN % 10] = currMeasure;
-  // timeData[loopN % 10] = currtime;
-  if (firstTimer) {
-    currMeasure = angle + angleoffset;
-    for (int i = 0; i < 10; i++) {
-      sensorReadings[i] = currMeasure;
-    }
-    firstTimer = false;
-    Serial.print("first interrupt :");
-    Serial.println(currtime);
-  } else {
-    Serial.print("curr time :");
-    Serial.println(fmod(currtime, sensorInterval));
-  }
-
-  lastAngle = angle;
-  lastStamp = currtime;
-  loopN++;
-  loopN %= 1000;
-  speed += (abs(sensorReadings[loopN % 10] - sensorReadings[(loopN + 8) % 10]) - speed) * 0.2;
-
-
-  if (currtime < 10000.f) {
-    // posData[numPositions] = (float)nowt;
-    // posData[numPositions] = currMeasure;
-    // numPositions++;
-  }
-}
-
-STM32Timer ITimer0(TIM1);
 
 
 void setup() {
   // Open serial communications and wait for port to open:
   Serial.begin(115200);
-  while (!Serial) yield();
+  // while (!Serial) yield();
   Serial.println("Inited Serial");
   Serial.println("inting daisy");
   hw = DAISY.init(DAISY_POD, AUDIO_SR_48K);
@@ -433,40 +352,25 @@ void setup() {
   loadFiles();
   SD.remove("/posdata.txt");
   posDataFile = SD.open("/posdata.txt", FILE_WRITE);
-  ITimer0.attachInterruptInterval(sensorInterval * 1000.f, TimerHandler0);
   DAISY.begin(AudioCallback);
 }
-int currWrites = 0;
-void writeSD() {
-  // if (posDataFile) {
-  //   int byteswritten = 0;
-  //   for (int i = currWrites; i < numPositions; i++) {
-  //     char buffer[14];  // 10 min string with, decimal, 2 characters after decimal, plus a \0
-  //     dtostrf(posData[i], 10, 6, buffer);
-  //     byteswritten += posDataFile.print(buffer);
-  //     byteswritten += posDataFile.print("\n");
-  //   }
-  //   currWrites = numPositions;
-  // } else {
-  //   Serial.println("KO --> Error to open 'posdata.txt' file");
-  // }
-}
-// File MyFile;
-void loop() {
-  // if (
-  //   currtime > 3000.f && !wroteData) {
-  //   wroteData = true;
-  //   DAISY.end();
-  //   ITimer0.stopTimer();
-  //   delay(500);
-  //   writeSD();
-  //   posDataFile.close();
-  //   Serial.print("Closing 'posdata.txt' file...");
-  //   Serial.println("OK");
 
-  //   DAISY.begin(AudioCallback);
-  //   ITimer0.restartTimer();
-  //   Serial.println("restarted timers");
-  // }
-  delay(10);
+float lasttime = 0.f;
+void loop() {
+  angle = 1.0 - (Sensor.getAngle() / 4096.0);
+  if (angle < 0.2 && lastAngle > 0.8) {
+    angleoffset += 1.f;
+  } else if (angle > 0.8 && lastAngle < 0.2) {
+    angleoffset -= 1.f;
+  }
+  lastAngle = angle;
+
+  // currMeasure += 0.05 * ((angle + angleoffset) - currMeasure);
+  currMeasure = angle + angleoffset;
+  Serial.print("speed :");
+  Serial.println(speed);
+  // lasttime = micros();
+  // currMeasure = micros() / 1000000.f;
+  // delay(20);
+  // Serial.println(currframe);
 }
